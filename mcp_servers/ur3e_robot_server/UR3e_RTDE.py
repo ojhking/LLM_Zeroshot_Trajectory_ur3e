@@ -210,57 +210,7 @@ class URController:
 def main():
     try:
         robot = URController()
-        # robot.move_zero()
-        # print("Moving to zero position.")
-        # robot.move_joints_degrees([0, -90, -90, -90, 90, 0]) # Movint to home position
-        # print(robot.get_tcp_pose())
-        # robot.gripper_on()
-        # robot.get_gripper_attached_state()
-        # robot.gripper_off()
-        # # time.sleep(5)
-        # robot.rtde_c.moveL([0.0, 0.3, 0.4, math.pi, 0, 0])
-        # robot.rtde_c.moveL([0.0, -0.3, 0.4, math.pi, 0, 0])
-        # robot.rtde_c.moveL([0.0, 0.3, 0.4, math.pi, 0, 0])
-        # robot.rtde_c.moveL([0.0, -0.3, 0.4, math.pi, 0, 0])
-        # robot.rtde_c.moveL([0.0, 0.3, 0.4, math.pi, 0, 0])
-        # robot.cartesian_move([-0.01, 0.40323667063465574, 0.4, math.pi, 0, 0])
-        # robot.cartesian_move([0.0, -0.3, 0.4, math.pi, 0, 0]) 
         robot.cartesian_move([0.0, 0.3, 0.3, math.pi, 0, 0]) 
-        # robot.cartesian_move([0.0, -0.3, 0.4, math.pi, 0, 0])   # Movint to home position
-        # time.sleep(5)
-        # robot.rtde_c.moveJ_IK([0.0, 0.3, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.0, -0.3, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.0, 0.3, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.3, 0.2, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([-0.1, -0.1, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.1, 0.1, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.2, 0.2, 0.4, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.3, 0.3, 0.3, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([-0.3, 0.3, 0.3, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.3, 0.3, 0.3, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.3, -0.3, 0.3, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.rtde_c.moveJ_IK([0.3, 0.3, 0.3, math.pi, 0, 0],speed = 0.55, acceleration = 0.5, asynchronous = False)
-        # robot.move_joints_degrees([0, -90, -90, -90, 90, 0]) # Movint to home position
-        # print("Joint move")
-        # time.sleep(2)
-        
-        # robot.move_joints_degrees_offset([20, 0, 20, 0, 0, 0])  # Joint1,3 offset
-        # print("Joint offset")
-        # time.sleep(2)
-        
-
-        # robot.cartesian_move([492.566802473547, -132.9753827241311, 488.40143373702693, -179.92272345493853, 0.06812247425190561, -89.96495452981424])  # Movint to home position
-        # print("Cartesian move")
-        # time.sleep(4)
-        # robot.cartesian_move_offset([0.0, 0.0, 200.0, 0.0, 0.0, 0.0])  # z offset
-        # print("Cartesian offset")
-        # time.sleep(2)
-        
-        # robot.move_home()
-        # print("Moving to Home position.")
-        
-        
-        # print(f"\nCurrent Joint [j1,j2,j3,j4,j5,j6] (degree): {robot.get_current_joints_degrees()}")
         print(f"\nTCP pose [x,y,z,roll,pitch,yaw] (mm): {robot.get_tcp_pose()}")
 
     except Exception as e:
